@@ -125,7 +125,7 @@ def call_gemini_api(query, text, previous_conversation, gender, username, botnam
     }
 
     try:
-        response = requests.post(url_response, json=payload, timeout=60)
+        response = requests.post(url_response, json=payload, timeout=180)
         response.raise_for_status()
         x = response.json()
         x = str(x)
